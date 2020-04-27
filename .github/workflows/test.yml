@@ -13,7 +13,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           run: npm run start
-      - name: tr
-        run: echo hello
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          record: true
+          start: npm run serve --prefix frontend/nix-app
+          wait-on: http://localhost:8080
         
  
