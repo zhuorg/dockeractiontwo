@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: node:10.16-jessie
-      options: --entrypoint "ppp"
+      options: --entrypoint "/bin/ls" -al
     steps: 
     - run: echo hello
