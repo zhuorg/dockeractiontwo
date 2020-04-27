@@ -3,5 +3,7 @@ on: push
 jobs: 
   test: 
     runs-on: ubuntu-latest
+    container: 
+      image: node:10.16-jessie
     steps: 
     - run: echo hello
