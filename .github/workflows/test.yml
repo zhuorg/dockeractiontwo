@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     container: 
       image: node:10.16-jessie
-      options: --entrypoint "/bin/ls" -al
+      options: --entrypoint "/bin/ls" 
     steps: 
-    - run: echo hello
+    - run: |
+       
+       echo hello
