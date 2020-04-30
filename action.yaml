@@ -5,11 +5,15 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  tag:
+    description: 'image tag'
+    required: true
+    default: 'latest'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'sparkletco/nixosify:latest'
+  image: ${{ format('sparkletco/nixosify:{0}', inputs.tag) }}
   args:
     - ${{ inputs.who-to-greet }}
