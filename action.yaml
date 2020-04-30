@@ -14,6 +14,6 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'sparkletco/nixosify:${{inputs.tag}}"
+  image: 'sparkletco/nixosify:${{inputs.tag}}'
   args:
     - ${{ inputs.who-to-greet }}
