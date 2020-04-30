@@ -1,6 +1,6 @@
   
 name: End-to-end tests
-on: [push]
+on: [check_suite]
 jobs:
   cypress-run:
     runs-on: windows-latest
